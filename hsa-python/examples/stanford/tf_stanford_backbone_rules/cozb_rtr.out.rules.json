@@ -1,0 +1,159 @@
+{
+ "rules": [
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620011
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620011
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620010
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620010
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620009
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620009
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620008
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620008
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620007
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620007
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620006
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620006
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620005
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620005
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620004
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620004
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620003
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620003
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620002
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620002
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    620001
+   ], 
+   "mask": null, 
+   "in_ports": [
+    620001
+   ], 
+   "action": "fwd", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": "00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000", 
+   "out_ports": [
+    620004
+   ], 
+   "mask": "11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000", 
+   "in_ports": [
+    620004
+   ], 
+   "action": "rw", 
+   "match": "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,00000000,00010000"
+  }
+ ], 
+ "ports": [
+  600001, 
+  600002, 
+  600003, 
+  600004, 
+  600007, 
+  600008, 
+  600010, 
+  600011
+ ], 
+ "id": 62
+}
