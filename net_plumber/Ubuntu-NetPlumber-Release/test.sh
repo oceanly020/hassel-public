@@ -20,4 +20,5 @@
 # done
 
 
-./net_plumber --load /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/tf_stanford_backbone_rules --policy /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/policy.json --hdr-len 16 
+./net_plumber --load /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/tf_stanford_backbone_rules --policy /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/policy_all.json --hdr-len 16 
+# ./net_plumber --load /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/tf_stanford_backbone_rules_fwd --policy /home/azrael/workplace/hassel-public/hsa-python/examples/stanford/policy_fwd.json --hdr-len 16

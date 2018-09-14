@@ -180,14 +180,34 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       Condition *test = val_to_cond(commands[i]["params"]["test"], N->get_length());
       N->add_source_probe(ports, mode, filter, test, NULL, NULL);
     } else if (type == "add_link") {
-      struct timeval start_in, end_in;
+      time_t start_in, end_in;
+      // struct timeval start_in, end_in;
       uint32_t from_port = commands[i]["params"]["from_port"].asUInt();
       uint32_t to_port = commands[i]["params"]["to_port"].asUInt();
-      gettimeofday(&start_in, NULL);
+      // gettimeofday(&start_in, NULL);
+      start_in = clock();
       N->add_link(from_port,to_port);
-      gettimeofday(&end_in, NULL);
-      printf("Add link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
+      end_in = clock();
+
+      printf("Add link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
+      // gettimeofday(&end_in, NULL);
+      // printf("Add link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
     }
+    else if (type == "remove_link") {
+      time_t start_in, end_in;
+      // struct timeval start_in, end_in;
+      uint32_t from_port = commands[i]["params"]["from_port"].asUInt();
+      uint32_t to_port = commands[i]["params"]["to_port"].asUInt();
+      // gettimeofday(&start_in, NULL);
+      start_in = clock();
+      N->remove_link(from_port,to_port);
+      end_in = clock();
+
+      // gettimeofday(&end_in, NULL);
+      printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
+      // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
+    }
+    
   }
   end = clock();
   printf("Loaded policy file in %2lf seconds\n",(double(end - start) / CLOCKS_PER_SEC));

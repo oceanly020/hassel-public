@@ -17,8 +17,8 @@ from time import time
 import json
 from headerspace.applications import find_reachability,print_paths
 
-in_path = "tf_stanford_backbone"
-out_path = "tf_stanford_backbone_rules"
+in_path = "tf_stanford_backbone_fwd"
+out_path = "tf_stanford_backbone_rules_fwd"
 
 PORT_TYPE_MULTIPLIER = 10000
 SWITCH_ID_MULTIPLIER = 100000
