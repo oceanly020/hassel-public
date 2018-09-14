@@ -3,6 +3,10 @@ Created on Sep 19, 2012
 
 @author: peymankazemian
 '''
+import os, sys
+lib_path = os.path.abspath(os.path.join('../..'))
+sys.path.append(lib_path)
+
 from headerspace.tf import TF
 import json
 
@@ -18,7 +22,7 @@ rtr_names = ["atla",
              ]
 PORT_TYPE_MULTIPLIER = 10000
 SWITCH_ID_MULTIPLIER = 100000
-path = "i2_tfs"
+path = "i2"
 out_path = "i2_json_rules"
 
 table_id = 0

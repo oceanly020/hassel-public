@@ -1,0 +1,882 @@
+{
+ "rules": [
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900015, 
+    900028, 
+    900002, 
+    900030, 
+    900031, 
+    900022, 
+    900021, 
+    900010, 
+    900005
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00001010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900015, 
+    900028, 
+    900001, 
+    900002, 
+    900030, 
+    900031, 
+    900022, 
+    900021
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00010100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900042
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00001111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900042
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00010000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900042
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00010001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900042
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00111101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900042
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00111110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900039
+   ], 
+   "action": "fwd", 
+   "match": "00000001,01100000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900039
+   ], 
+   "action": "fwd", 
+   "match": "00000001,01100111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900039
+   ], 
+   "action": "fwd", 
+   "match": "00000011,10011001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900039
+   ], 
+   "action": "fwd", 
+   "match": "00000011,11101100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900039
+   ], 
+   "action": "fwd", 
+   "match": "00000011,11101101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900037
+   ], 
+   "action": "fwd", 
+   "match": "00000001,00000111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900037
+   ], 
+   "action": "fwd", 
+   "match": "00000001,00001000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900036
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11100000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,01011000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,01100010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,10100110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,10110111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,10111011,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11000010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11000011,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000001,00101001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000010,10011100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000010,10011101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000011,10000101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900035
+   ], 
+   "action": "fwd", 
+   "match": "00000011,11011011,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900034, 
+    900033, 
+    900011, 
+    900018, 
+    900012, 
+    900025, 
+    900032, 
+    900043, 
+    900009
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00000000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900020
+   ], 
+   "action": "fwd", 
+   "match": "00000000,01101001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900049
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110011,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900049
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900049
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900049
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900048
+   ], 
+   "action": "fwd", 
+   "match": "00000001,11111010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900048
+   ], 
+   "action": "fwd", 
+   "match": "00000001,11111101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900003, 
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00001011,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900003
+   ], 
+   "action": "fwd", 
+   "match": "00000001,11110111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900003
+   ], 
+   "action": "fwd", 
+   "match": "00000010,01000101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001, 
+    900016
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00001101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00010101,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00011110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00011111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00100000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00100001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00101000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00101001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00101010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00111100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,01000110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900001
+   ], 
+   "action": "fwd", 
+   "match": "00000000,01010000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00110111,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00111000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000000,10110110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11010010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11010100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000001,11111000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000001,11111110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00000101,00011001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900029, 
+    900027
+   ], 
+   "action": "fwd", 
+   "match": "00001000,00000001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900044, 
+    900045
+   ], 
+   "action": "fwd", 
+   "match": "00000100,00000110,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900010
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00001100,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900016
+   ], 
+   "action": "fwd", 
+   "match": "00000100,10110000,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900017
+   ], 
+   "action": "fwd", 
+   "match": "00000100,10110001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900023
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00000010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900023
+   ], 
+   "action": "fwd", 
+   "match": "00000000,11001010,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }, 
+  {
+   "rewrite": null, 
+   "out_ports": [
+    900000
+   ], 
+   "mask": null, 
+   "in_ports": [
+    900043, 
+    900009
+   ], 
+   "action": "fwd", 
+   "match": "00000000,00000001,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+  }
+ ], 
+ "ports": [
+  900001, 
+  900002, 
+  900003, 
+  900005, 
+  900009, 
+  900010, 
+  900011, 
+  900012, 
+  900015, 
+  900016, 
+  900017, 
+  900018, 
+  900020, 
+  900021, 
+  900022, 
+  900023, 
+  900025, 
+  900027, 
+  900028, 
+  900029, 
+  900030, 
+  900031, 
+  900032, 
+  900033, 
+  900034, 
+  900035, 
+  900036, 
+  900037, 
+  900039, 
+  900042, 
+  900043, 
+  900044, 
+  900045, 
+  900048, 
+  900049
+ ], 
+ "id": 90
+}
