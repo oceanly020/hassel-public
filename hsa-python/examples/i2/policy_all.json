@@ -372,8 +372,8 @@
   },
   {
    "params": {
-    "table": 11, 
-    "id": 256
+    "table": 10, 
+    "id": 7
    }, 
    "jsonrpc": "2.0", 
    "id": 11, 
@@ -381,8 +381,8 @@
   },
   {
    "params": {
-    "table": 10, 
-    "id": 7
+    "table": 11, 
+    "id": 256
    }, 
    "jsonrpc": "2.0", 
    "id": 11, 
@@ -532,9 +532,6 @@
    "id": 11, 
    "method": "re_add_rule"
   }
-
-
-
 
 
 
