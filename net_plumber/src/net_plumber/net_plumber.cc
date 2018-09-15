@@ -468,6 +468,8 @@ void NetPlumber::print_table(uint32_t id) {
   }
 }
 
+
+
 uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                                bool group, uint64_t gid,
                                List_t in_ports, List_t out_ports,
@@ -551,6 +553,9 @@ uint64_t NetPlumber::add_rule_to_group(uint32_t table,int index, List_t in_ports
   return _add_rule(table,index,true,group,in_ports,out_ports,match,mask,rw);
 }
 
+RuleNode *NetPlumber::get_rule(uint64_t rule_id){
+  return (RuleNode *)id_to_node[rule_id];
+}
 
 void NetPlumber::remove_rule(uint64_t rule_id) {
   if (id_to_node.count(rule_id) > 0 && id_to_node[rule_id]->get_type() == RULE){

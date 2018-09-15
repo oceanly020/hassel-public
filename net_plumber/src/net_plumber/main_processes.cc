@@ -207,40 +207,42 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
     } 
     else if (type == "add_rule") {
-      time_t start_in, end_in;
+      // time_t start_in, end_in;
+      struct timeval start_in, end_in;
+      long run_time = 0;
       // struct timeval start_in, end_in;
-      gettimeofday(&start, NULL);
+      
 
       uint32_t table = commands[i]["params"]["table"].asUInt();
+      uint32_t id = commands[i]["params"]["id"].asUInt();
 
-      uint64_t rule_id = table_to_last_id[table] + ((uint64_t)table << 32) ;
+      uint64_t rule_id = (uint64_t)id + ((uint64_t)table << 32) ;
 
-      RuleNode *r = (RuleNode *)id_to_node[rule_id];
+      RuleNode *r = N->get_rule(rule_id);
 
       List_t in_ports = r->input_ports;
       List_t out_ports = r->output_ports;
       array_t *match = r->match;
       array_t *mask = r->mask;
       array_t *rewrite = r->rewrite;
-      remove_rule(rule_id);
+      N->remove_rule(rule_id);
 
-
-      N->add_rule(table_id,
+      gettimeofday(&start_in, NULL);
+      N->add_rule(table,
                 0,
                 in_ports,
                 out_ports,
                 match,
                 mask,
                 rewrite);
-      gettimeofday(&end, NULL);
-      run_time = end.tv_usec - start.tv_usec;
+      gettimeofday(&end_in, NULL);
+      run_time = end_in.tv_usec - start_in.tv_usec;
       if (run_time < 0) {
-        run_time = 1000000 * (end.tv_sec - start.tv_sec);
+        run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec);
       }
-      total_run_time += run_time;
 
       // gettimeofday(&end_in, NULL);
-      printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
+      printf("Add rule %d - %d need %ld us to be completed.\n", table, id, run_time);
       // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
     }
     

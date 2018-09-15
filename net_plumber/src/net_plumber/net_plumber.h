@@ -138,7 +138,7 @@ namespace net_plumber {
      * get_src_ports: get the src end of a link whose dst port is @dst_port
      * print_topology: prints current link connections.
      */
-    void add_link(uint32_t from_port, uint32_t to_port);
+    void add_link(uint32_t from_port, uint32_t to_port);  
     void remove_link(uint32_t from_port, uint32_t to_port);
     std::vector<uint32_t> *get_dst_ports(uint32_t src_port);
     std::vector<uint32_t> *get_src_ports(uint32_t dst_port);
@@ -179,6 +179,8 @@ namespace net_plumber {
     uint64_t add_rule_to_group(uint32_t table,int index, List_t in_ports,
                                List_t out_ports, array_t* match, array_t *mask,
                                array_t* rw, uint64_t group);
+
+    RuleNode *get_rule(uint64_t rule_id);
     void remove_rule(uint64_t node_id);
 
     /*
