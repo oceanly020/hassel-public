@@ -91,6 +91,14 @@ class RuleNode : public Node {
                                     array_t* change);
   void subtract_infuences_from_flows();
 
+  array_t *copy_match();
+  
+  array_t *copy_mask();
+  array_t *copy_rewrite();
+  List_t copy_in_ports();
+  List_t copy_out_ports();
+
+
   /*
    * Setting influences.
    */

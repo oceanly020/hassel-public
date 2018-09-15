@@ -206,44 +206,41 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
       // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
     } 
-    else if (type == "add_rule") {
+    else if (type == "re_add_rule") {
       // time_t start_in, end_in;
       struct timeval start_in, end_in;
       long run_time = 0;
       // struct timeval start_in, end_in;
-      
-
       uint32_t table = commands[i]["params"]["table"].asUInt();
       uint32_t id = commands[i]["params"]["id"].asUInt();
 
+      // long run_time = 0;
       uint64_t rule_id = (uint64_t)id + ((uint64_t)table << 32) ;
-
       RuleNode *r = N->get_rule(rule_id);
 
-      List_t in_ports = r->input_ports;
-      List_t out_ports = r->output_ports;
-      array_t *match = r->match;
-      array_t *mask = r->mask;
-      array_t *rewrite = r->rewrite;
+      List_t in_ports = r->copy_in_ports();
+      List_t out_ports = r->copy_out_ports();
+      array_t *match = r->copy_match();
+      array_t *mask = r->copy_mask();
+      array_t *rewrite = r->copy_rewrite();
       N->remove_rule(rule_id);
 
       gettimeofday(&start_in, NULL);
       N->add_rule(table,
-                0,
-                in_ports,
-                out_ports,
-                match,
-                mask,
-                rewrite);
+                  0,
+                  in_ports,
+                  out_ports,
+                  match,
+                  mask,
+                  rewrite);
+
+      // N->re_add_rule(table, id);
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
       if (run_time < 0) {
         run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec);
       }
-
-      // gettimeofday(&end_in, NULL);
       printf("Add rule %d - %d need %ld us to be completed.\n", table, id, run_time);
-      // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
     }
     
   }

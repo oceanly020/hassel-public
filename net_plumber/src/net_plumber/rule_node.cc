@@ -40,7 +40,7 @@ void RuleNode::set_layer_flags() {
 
 RuleNode::RuleNode(void *n, int length, uint64_t node_id, uint32_t table,
                    List_t in_ports, List_t out_ports,
-                   array_t* match, array_t *mask, array_t* rewrite) :
+                   array_t *match, array_t *mask, array_t *rewrite) :
                    Node(n,length,node_id), table(table), group(0) {
   this->node_type = RULE;
   this->match = match;
@@ -157,6 +157,31 @@ string RuleNode::rule_to_str() {
   }
   return result.str();
 }
+
+
+array_t *RuleNode::copy_match(){
+  return array_copy(this->match, length);
+}
+array_t *RuleNode::copy_mask(){
+  if (this->mask)
+    return array_copy(this->mask, length);
+  else
+    return NULL;
+}
+array_t *RuleNode::copy_rewrite(){
+  if (this->rewrite)
+    return array_copy(this->rewrite, length);
+  else
+    return NULL;
+}
+List_t RuleNode::copy_in_ports(){
+  return copy_list(this->input_ports);
+}
+
+List_t RuleNode::copy_out_ports(){
+  return copy_list(this->output_ports);
+}
+
 
 string RuleNode::influence_to_str() {
   stringstream result;

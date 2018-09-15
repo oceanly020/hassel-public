@@ -80,53 +80,7 @@
 === Loading rule file /home/azrael/workplace/hassel-public/hsa-python/examples/i2/i2_json_rules/hous.in.rules.json to NetPlumber ===
 === Loading rule file /home/azrael/workplace/hassel-public/hsa-python/examples/i2/i2_json_rules/wash.in.rules.json to NetPlumber ===
 === Loading rule file /home/azrael/workplace/hassel-public/hsa-python/examples/i2/i2_json_rules/newy32aoa.out.rules.json to NetPlumber ===
-total run time is 184653761 us. rules: 77841 average: 2372 us
+total run time is 175579812 us. rules: 77841 average: 2255 us
 Loading policy file /home/azrael/workplace/hassel-public/hsa-python/examples/i2/policy_router.json
 Add link 150001 - 100001 need 0.000000 ms to be completed.
-Add source 1 need 4280.000000 ms to be completed.
-Add link 150004 - 100004 need 0.000000 ms to be completed.
-Add source 2 need 4290.000000 ms to be completed.
-Add link 150007 - 100007 need 0.000000 ms to be completed.
-Add source 3 need 8680.000000 ms to be completed.
-Add link 150008 - 100008 need 0.000000 ms to be completed.
-Add source 4 need 4310.000000 ms to be completed.
-Add link 150009 - 100009 need 0.000000 ms to be completed.
-Add source 5 need 4290.000000 ms to be completed.
-Add link 150010 - 100010 need 0.000000 ms to be completed.
-Add source 6 need 4270.000000 ms to be completed.
-Add link 150015 - 100015 need 0.000000 ms to be completed.
-Add source 7 need 4310.000000 ms to be completed.
-Add link 150017 - 100017 need 0.000000 ms to be completed.
-Add source 8 need 4350.000000 ms to be completed.
-Add link 150018 - 100018 need 0.000000 ms to be completed.
-Add source 9 need 4300.000000 ms to be completed.
-Add link 150019 - 100019 need 0.000000 ms to be completed.
-Add source 9 need 4280.000000 ms to be completed.
-Add link 150020 - 100020 need 0.000000 ms to be completed.
-Add source 9 need 8570.000000 ms to be completed.
-Add link 150021 - 100021 need 0.000000 ms to be completed.
-Add source 9 need 4310.000000 ms to be completed.
-Add link 150022 - 100022 need 0.000000 ms to be completed.
-Add source 9 need 12850.000000 ms to be completed.
-Add link 150023 - 100023 need 0.000000 ms to be completed.
-Add source 9 need 8630.000000 ms to be completed.
-Add link 150024 - 100024 need 0.000000 ms to be completed.
-Add source 9 need 17160.000000 ms to be completed.
-Add link 150025 - 100025 need 0.000000 ms to be completed.
-Add source 9 need 4300.000000 ms to be completed.
-Add link 150026 - 100026 need 0.000000 ms to be completed.
-Add source 9 need 4280.000000 ms to be completed.
-Add link 150027 - 100027 need 0.000000 ms to be completed.
-Add source 9 need 12840.000000 ms to be completed.
-Add link 150028 - 100028 need 0.000000 ms to be completed.
-Add source 9 need 8640.000000 ms to be completed.
-Add link 150030 - 100030 need 0.000000 ms to be completed.
-Add source 9 need 8540.000000 ms to be completed.
-Add link 150031 - 100031 need 0.000000 ms to be completed.
-Add source 9 need 51860.000000 ms to be completed.
-Add link 150032 - 100032 need 0.000000 ms to be completed.
-Add source 9 need 8590.000000 ms to be completed.
-Add link 150033 - 100033 need 0.000000 ms to be completed.
-Add source 9 need 4350.000000 ms to be completed.
-Loaded policy file in 202.280000 seconds
-Done! Cleaning up the NetPlumber
+Add source 1 need 4730.000000 ms to be completed

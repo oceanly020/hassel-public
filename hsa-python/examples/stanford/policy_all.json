@@ -4,8 +4,6 @@
    "params": {
     "to_port": 100021, 
     "from_port": 150021
-    // "to_port": 700003, 
-    // "from_port": 750003
    }, 
    "jsonrpc": "2.0", 
    "id": 0, 
@@ -24,9 +22,6 @@
     "ports": [
      150021
     ]
-    // "ports": [
-    //  750003
-    // ]
    }, 
    "jsonrpc": "2.0", 
    "id": 1, 
@@ -603,8 +598,171 @@
    "jsonrpc": "2.0", 
    "id": 3, 
    "method": "add_link"
+  },
+
+  {
+   "params": {
+    "table": 10, 
+    "id": 12
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 11, 
+    "id": 55
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 12, 
+    "id": 9
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 20, 
+    "id": 5
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 21, 
+    "id": 320
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 22, 
+    "id": 10
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 30, 
+    "id": 5
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 31, 
+    "id": 35
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 32, 
+    "id": 41
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 40, 
+    "id": 15
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 41, 
+    "id": 18
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 42, 
+    "id": 25
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 70, 
+    "id": 20
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 71, 
+    "id": 22
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 72, 
+    "id": 15
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 160, 
+    "id": 40
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 161, 
+    "id": 55
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 162, 
+    "id": 45
+   }, 
+   "11": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
   }
-  
+
 
  ]
 }
