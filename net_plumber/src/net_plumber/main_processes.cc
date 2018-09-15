@@ -205,32 +205,33 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // gettimeofday(&end_in, NULL);
       printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
       // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
-    } else if (type == "add_rule") {
-      time_t start_in, end_in;
-      // struct timeval start_in, end_in;
-      gettimeofday(&start, NULL);
+    } 
+    // else if (type == "add_rule") {
+    //   time_t start_in, end_in;
+    //   // struct timeval start_in, end_in;
+    //   gettimeofday(&start, NULL);
 
-      
-      RuleNode *r = (RuleNode *)id_to_node[rule_id];
-      remove_rule(rule_id);
-      N->add_rule(table_id,
-                0,
-                val_to_list(commands[i]["params"]["in_ports"]),
-                val_to_list(commands[i]["params"]["out_ports"]),
-                match,
-                val_to_array(commands[i]["params"]["mask"]),
-                val_to_array(commands[i]["params"]["rewrite"]));
-      gettimeofday(&end, NULL);
-      run_time = end.tv_usec - start.tv_usec;
-      if (run_time < 0) {
-        run_time = 1000000 * (end.tv_sec - start.tv_sec);
-      }
-      total_run_time += run_time;
 
-      // gettimeofday(&end_in, NULL);
-      printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
-      // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
-    }
+    //   RuleNode *r = (RuleNode *)id_to_node[rule_id];
+    //   remove_rule(rule_id);
+    //   N->add_rule(table_id,
+    //             0,
+    //             val_to_list(commands[i]["params"]["in_ports"]),
+    //             val_to_list(commands[i]["params"]["out_ports"]),
+    //             match,
+    //             val_to_array(commands[i]["params"]["mask"]),
+    //             val_to_array(commands[i]["params"]["rewrite"]));
+    //   gettimeofday(&end, NULL);
+    //   run_time = end.tv_usec - start.tv_usec;
+    //   if (run_time < 0) {
+    //     run_time = 1000000 * (end.tv_sec - start.tv_sec);
+    //   }
+    //   total_run_time += run_time;
+
+    //   // gettimeofday(&end_in, NULL);
+    //   printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
+    //   // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
+    // }
     
   }
   end = clock();
