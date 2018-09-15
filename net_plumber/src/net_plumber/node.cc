@@ -245,6 +245,7 @@ void Node::propagate_src_flow_on_pipes(list<struct Flow*>::iterator s_flow) {
     if (is_output_layer && should_block_flow(*s_flow,(*it)->local_port))
       continue;
     if (!h) h = (hs *)malloc(sizeof *h);
+    count_hs_isect_arr ++;
     if (hs_isect_arr(h, (*s_flow)->processed_hs, (*it)->pipe_array)) {
       // create a new flow struct to pass to next node in pipeline
       Flow *next_flow = (Flow *)malloc(sizeof *next_flow);

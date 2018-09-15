@@ -555,32 +555,7 @@ uint64_t NetPlumber::add_rule_to_group(uint32_t table,int index, List_t in_ports
 
 RuleNode *NetPlumber::get_rule(uint64_t rule_id){
   return (RuleNode *)id_to_node[rule_id];
-  // struct timeval start_in, end_in;
-  // long run_time = 0;
-  // uint64_t rule_id = (uint64_t)id + ((uint64_t)table << 32) ;
-  // RuleNode *r = (RuleNode *)id_to_node[rule_id];
 
-  // List_t in_ports = r->copy_in_ports();
-  // List_t out_ports = r->copy_out_ports();
-  // array_t *match = r->copy_match();
-  // array_t *mask = r->copy_mask();
-  // array_t *rewrite = r->copy_rewrite();
-  // this->remove_rule(rule_id);
-
-  // // gettimeofday(&start_in, NULL);
-  // this->add_rule(table,
-  //                 0,
-  //                 in_ports,
-  //                 out_ports,
-  //                 match,
-  //                 mask,
-  //                 rewrite);
-  // gettimeofday(&end_in, NULL);
-  // run_time = end_in.tv_usec - start_in.tv_usec;
-  // if (run_time < 0) {
-  //   run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec);
-  // }
-  // printf("Add rule %d - %d need %ld us to be completed.\n", table, id, run_time);
 }
 
 void NetPlumber::remove_rule(uint64_t rule_id) {

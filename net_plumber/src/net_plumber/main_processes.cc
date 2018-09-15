@@ -152,6 +152,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
   for (int i = 0; i < commands.size(); i++) {
     string type = commands[i]["method"].asString();
     if (type == "add_source") {
+      count_hs_isect_arr = 0;
       // struct timeval start_in, end_in;
       time_t start_in, end_in;
       hs *tmp = val_to_hs(commands[i]["params"]["hs"], N->get_length());
@@ -170,7 +171,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       end_in = clock();
       // gettimeofday(&end_in, NULL);
       // printf("Add source %d need %ld ms to be completed.\n", commands[i]["id"].asUInt(), ((end_in.tv_usec - start_in.tv_usec)/1000));
-      printf("Add source %d need %2lf ms to be completed.\n", commands[i]["id"].asUInt(), (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
+      printf("Add source %d need %2lf ms to be completed with %d insc comp.\n", commands[i]["id"].asUInt(), (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)), count_hs_isect_arr);
 
     } else if (type == "add_source_probe") {
       List_t ports = val_to_list(commands[i]["params"]["ports"]);
