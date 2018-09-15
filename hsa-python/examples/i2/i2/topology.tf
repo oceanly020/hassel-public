@@ -56,12 +56,3 @@ link$[420021]$None$None$None$None$None$[700013]$#$#$$$link_53$
 link$[720013]$None$None$None$None$None$[400021]$#$#$$$link_54$
 link$[220004]$None$None$None$None$None$[600014]$#$#$$$link_55$
 link$[620014]$None$None$None$None$None$[200004]$#$#$$$link_56$
-link$[100000]$None$None$None$None$None$[100000]$#$#$$$link_57$
-link$[200000]$None$None$None$None$None$[200000]$#$#$$$link_58$
-link$[300000]$None$None$None$None$None$[300000]$#$#$$$link_59$
-link$[400000]$None$None$None$None$None$[400000]$#$#$$$link_60$
-link$[500000]$None$None$None$None$None$[500000]$#$#$$$link_61$
-link$[600000]$None$None$None$None$None$[600000]$#$#$$$link_62$
-link$[700000]$None$None$None$None$None$[700000]$#$#$$$link_63$
-link$[800000]$None$None$None$None$None$[800000]$#$#$$$link_64$
-link$[900000]$None$None$None$None$None$[900000]$#$#$$$link_65$
