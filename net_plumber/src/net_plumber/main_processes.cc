@@ -152,7 +152,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
   for (int i = 0; i < commands.size(); i++) {
     string type = commands[i]["method"].asString();
     if (type == "add_source") {
-      count_hs_isect_arr = 0;
+      // count_hs_isect_arr = 0;
       // struct timeval start_in, end_in;
       time_t start_in, end_in;
       hs *tmp = val_to_hs(commands[i]["params"]["hs"], N->get_length());

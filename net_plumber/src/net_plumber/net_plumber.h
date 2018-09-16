@@ -111,7 +111,7 @@ namespace net_plumber {
     void *loop_callback_data;
     global_error_callback_t blackhole_callback;
     void *blackhole_callback_data;
-
+    
     /*
      * constructor.
      * @length: length of header (L)

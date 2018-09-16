@@ -27,6 +27,8 @@ extern "C" {
   #include "../headerspace/hs.h"
 }
 
+
+
 enum NODE_TYPE {
   BASE = 0,
   RULE,
