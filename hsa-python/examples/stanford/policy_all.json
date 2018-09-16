@@ -951,39 +951,39 @@
    "id": 11, 
    "method": "re_add_rule"
   },
-  // {
-  //  "params": {
-  //   "table": 31, 
-  //   "id": 8
-  //  }, 
-  //  "11": "2.0", 
-  //  "id": 11, 
-  //  "method": "re_add_rule"
-  // },
-  // {
-  //  "params": {
-  //   "table": 31, 
-  //   "id": 55
-  //  }, 
-  //  "11": "2.0", 
-  //  "id": 11, 
-  //  "method": "re_add_rule"
-  // },
-  // {
-  //  "params": {
-  //   "table": 31, 
-  //   "id": 26
-  //  }, 
-  //  "11": "2.0", 
-  //  "id": 11, 
-  //  "method": "re_add_rule"
-  // },
+  {
+   "params": {
+    "table": 31, 
+    "id": 8
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 31, 
+    "id": 55
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
+  {
+   "params": {
+    "table": 31, 
+    "id": 26
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_rule"
+  },
   {
    "params": {
     "table": 32, 
     "id": 30
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -992,7 +992,7 @@
     "table": 32, 
     "id": 15
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1037,7 +1037,7 @@
     "table": 41, 
     "id": 20
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1046,7 +1046,7 @@
     "table": 41, 
     "id": 5
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1055,7 +1055,7 @@
     "table": 41, 
     "id": 33
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1064,7 +1064,7 @@
     "table": 42, 
     "id": 25
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1073,7 +1073,7 @@
     "table": 42, 
     "id": 12
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1082,7 +1082,7 @@
     "table": 42, 
     "id": 5
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1118,7 +1118,7 @@
     "table": 71, 
     "id": 22
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1127,7 +1127,7 @@
     "table": 71, 
     "id": 32
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1136,7 +1136,7 @@
     "table": 71, 
     "id": 9
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1145,7 +1145,7 @@
     "table": 72, 
     "id": 15
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1154,7 +1154,7 @@
     "table": 72, 
     "id": 8
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1163,7 +1163,7 @@
     "table": 72, 
     "id": 2
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1199,7 +1199,7 @@
     "table": 161, 
     "id": 55
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1208,7 +1208,7 @@
     "table": 161, 
     "id": 62
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1217,7 +1217,7 @@
     "table": 161, 
     "id": 15
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1226,7 +1226,7 @@
     "table": 161, 
     "id": 8
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1235,7 +1235,7 @@
     "table": 161, 
     "id": 48
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1245,7 +1245,7 @@
     "table": 162, 
     "id": 5
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   }
@@ -1254,7 +1254,7 @@
     "table": 162, 
     "id": 15
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   }
