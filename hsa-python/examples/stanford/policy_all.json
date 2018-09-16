@@ -951,33 +951,33 @@
    "id": 11, 
    "method": "re_add_rule"
   },
-  {
-   "params": {
-    "table": 31, 
-    "id": 8
-   }, 
-   "11": "2.0", 
-   "id": 11, 
-   "method": "re_add_rule"
-  },
-  {
-   "params": {
-    "table": 31, 
-    "id": 55
-   }, 
-   "11": "2.0", 
-   "id": 11, 
-   "method": "re_add_rule"
-  },
-  {
-   "params": {
-    "table": 31, 
-    "id": 26
-   }, 
-   "11": "2.0", 
-   "id": 11, 
-   "method": "re_add_rule"
-  },
+  // {
+  //  "params": {
+  //   "table": 31, 
+  //   "id": 8
+  //  }, 
+  //  "11": "2.0", 
+  //  "id": 11, 
+  //  "method": "re_add_rule"
+  // },
+  // {
+  //  "params": {
+  //   "table": 31, 
+  //   "id": 55
+  //  }, 
+  //  "11": "2.0", 
+  //  "id": 11, 
+  //  "method": "re_add_rule"
+  // },
+  // {
+  //  "params": {
+  //   "table": 31, 
+  //   "id": 26
+  //  }, 
+  //  "11": "2.0", 
+  //  "id": 11, 
+  //  "method": "re_add_rule"
+  // },
   {
    "params": {
     "table": 32, 
