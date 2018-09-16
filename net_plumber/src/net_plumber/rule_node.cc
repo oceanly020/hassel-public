@@ -160,7 +160,11 @@ string RuleNode::rule_to_str() {
 
 
 array_t *RuleNode::copy_match(){
-  return array_copy(this->match, length);
+  if (this->match)
+    return array_copy(this->match, length);
+  else
+    return NULL;
+  
 }
 array_t *RuleNode::copy_mask(){
   if (this->mask)
@@ -175,11 +179,17 @@ array_t *RuleNode::copy_rewrite(){
     return NULL;
 }
 List_t RuleNode::copy_in_ports(){
-  return copy_list(this->input_ports);
+  if (this->input_ports)
+    return copy_list(this->input_ports);
+  else
+    return NULL;
 }
 
 List_t RuleNode::copy_out_ports(){
-  return copy_list(this->output_ports);
+  if (this->output_ports)
+    return copy_list(this->output_ports);
+  else
+    return NULL;
 }
 
 

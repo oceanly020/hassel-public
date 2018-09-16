@@ -717,7 +717,7 @@
     "table": 41, 
     "id": 2080
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -726,7 +726,7 @@
     "table": 41, 
     "id": 2940
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -735,7 +735,7 @@
     "table": 41, 
     "id": 1659
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -744,7 +744,7 @@
     "table": 41, 
     "id": 3200
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -753,7 +753,7 @@
     "table": 41, 
     "id": 1245
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -762,7 +762,7 @@
     "table": 41, 
     "id": 1186
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -771,7 +771,7 @@
     "table": 41, 
     "id": 522
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -807,7 +807,7 @@
     "table": 51, 
     "id": 4120
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -816,7 +816,7 @@
     "table": 51, 
     "id": 1569
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },{
@@ -824,7 +824,7 @@
     "table": 51, 
     "id": 2828
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },{
@@ -832,7 +832,7 @@
     "table": 51, 
     "id": 1650
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },{
@@ -840,7 +840,7 @@
     "table": 51, 
     "id": 899
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },{
@@ -848,7 +848,7 @@
     "table": 51, 
     "id": 52
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -884,7 +884,7 @@
     "table": 61, 
     "id": 55
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -893,7 +893,7 @@
     "table": 61, 
     "id": 1569
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -902,7 +902,7 @@
     "table": 61, 
     "id": 2100
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -911,7 +911,7 @@
     "table": 61, 
     "id": 987
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -920,7 +920,7 @@
     "table": 61, 
     "id": 115
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -929,7 +929,7 @@
     "table": 61, 
     "id": 6
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -938,7 +938,7 @@
     "table": 61, 
     "id": 88
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -975,7 +975,7 @@
     "table": 71, 
     "id": 997
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -984,7 +984,7 @@
     "table": 71, 
     "id": 586
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -993,7 +993,7 @@
     "table": 71, 
     "id": 1265
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1002,7 +1002,7 @@
     "table": 71, 
     "id": 2200
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1011,7 +1011,7 @@
     "table": 71, 
     "id": 1135
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1020,7 +1020,7 @@
     "table": 71, 
     "id": 978
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1029,7 +1029,7 @@
     "table": 71, 
     "id": 98
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1065,7 +1065,7 @@
     "table": 81, 
     "id": 1554
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1074,7 +1074,7 @@
     "table": 81, 
     "id": 2010
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1083,7 +1083,7 @@
     "table": 81, 
     "id": 1148
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1092,7 +1092,7 @@
     "table": 81, 
     "id": 532
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1101,7 +1101,7 @@
     "table": 81, 
     "id": 25
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1137,7 +1137,7 @@
     "table": 91, 
     "id": 4890
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1146,7 +1146,7 @@
     "table": 91, 
     "id": 3689
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1155,7 +1155,7 @@
     "table": 91, 
     "id": 554
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1164,7 +1164,7 @@
     "table": 91, 
     "id": 1426
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1173,7 +1173,7 @@
     "table": 91, 
     "id": 82
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
