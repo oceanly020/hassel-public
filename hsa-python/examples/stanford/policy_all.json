@@ -794,7 +794,7 @@
     "table": 11, 
     "id": 55
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -803,7 +803,7 @@
     "table": 11, 
     "id": 32
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -812,7 +812,7 @@
     "table": 11, 
     "id": 21
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -821,7 +821,7 @@
     "table": 11, 
     "id": 2
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -830,7 +830,7 @@
     "table": 12, 
     "id": 9
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -839,7 +839,7 @@
     "table": 12, 
     "id": 7
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -875,7 +875,7 @@
     "table": 21, 
     "id": 150
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -884,7 +884,7 @@
     "table": 21, 
     "id": 151
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -893,7 +893,7 @@
     "table": 21, 
     "id": 65
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -902,7 +902,7 @@
     "table": 21, 
     "id": 4
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -911,7 +911,7 @@
     "table": 22, 
     "id": 10
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -920,7 +920,7 @@
     "table": 22, 
     "id": 6
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -928,8 +928,8 @@
    "params": {
     "table": 22, 
     "id": 1
-   }, 
-   "11": "2.0", 
+    },
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
@@ -1028,7 +1028,7 @@
     "table": 41, 
     "id": 18
    }, 
-   "11": "2.0", 
+   "jsonrpc": "2.0", 
    "id": 11, 
    "method": "re_add_rule"
   },
