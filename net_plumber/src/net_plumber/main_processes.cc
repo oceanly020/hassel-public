@@ -236,7 +236,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
         printf("rewrite NULL\n");
 
       N->remove_rule(rule_id);
-
+      printf("Rempve rule %d - %d successed.\n", table, id);
       gettimeofday(&start_in, NULL);
       N->add_rule(table,
                   0,
