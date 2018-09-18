@@ -239,7 +239,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
       if (run_time < 0) {
-        run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec);
+        run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
       }
       printf("Add rule %d - %d need %ld us to be completed.\n", table, id, run_time);
     }
