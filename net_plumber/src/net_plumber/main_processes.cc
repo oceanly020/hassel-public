@@ -220,10 +220,21 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       RuleNode *r = N->get_rule(rule_id);
 
       List_t in_ports = r->copy_in_ports();
+      if (!in_ports)
+        printf("in_ports NULL\n");
       List_t out_ports = r->copy_out_ports();
+      if (!out_ports)
+        printf("out_ports NULL\n");
       array_t *match = r->copy_match();
+      if (!match)
+        printf("match NULL\n");
       array_t *mask = r->copy_mask();
+      if (!mask)
+        printf("mask NULL\n");
       array_t *rewrite = r->copy_rewrite();
+      if (!rewrite)
+        printf("rewrite NULL\n");
+
       N->remove_rule(rule_id);
 
       gettimeofday(&start_in, NULL);
