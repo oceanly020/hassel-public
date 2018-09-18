@@ -220,10 +220,10 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       RuleNode *r = N->get_rule(rule_id);
 
       List_t in_ports = r->copy_in_ports();
-      if (!in_ports)
+      if (!in_ports.size)
         printf("in_ports NULL\n");
       List_t out_ports = r->copy_out_ports();
-      if (!out_ports)
+      if (!out_ports.size)
         printf("out_ports NULL\n");
       array_t *match = r->copy_match();
       if (!match)
