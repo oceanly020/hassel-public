@@ -2,8 +2,8 @@
  "commands": [
   {
    "params": {
-    "to_port": 100027,
-    "from_port": 150027
+    "to_port": 100031,
+    "from_port": 150031
    }, 
    "jsonrpc": "2.0", 
    "id": 0, 
@@ -20,7 +20,7 @@
      ]
     }, 
     "ports": [
-     150027
+     150031
     ]
    }, 
    "jsonrpc": "2.0", 
@@ -30,8 +30,36 @@
 
   {
    "params": {
-    "to_port": 200039, 
+    "to_port": 200039,
     "from_port": 250039
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 0, 
+   "method": "add_link"
+  }, 
+  {
+   "params": {
+    "hs": {
+     "diff": [
+      []
+     ], 
+     "list": [
+      "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+     ]
+    }, 
+    "ports": [
+     250039
+    ]
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 1, 
+   "method": "add_source"
+  },
+
+  {
+   "params": {
+    "to_port": 200040, 
+    "from_port": 250040
    }, 
    "jsonrpc": "2.0", 
    "id": 1, 
@@ -48,7 +76,7 @@
      ]
     }, 
     "ports": [
-     250039
+     250040
     ]
    }, 
    "jsonrpc": "2.0", 
