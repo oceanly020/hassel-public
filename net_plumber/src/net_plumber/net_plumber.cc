@@ -479,11 +479,13 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
     uint64_t id = table_to_last_id[table] + ((uint64_t)table << 32) ;
     if (in_ports.size == 0) in_ports = table_to_ports[table];
     RuleNode *r;
+    // printf("_add_rule start\n");
     if (!group || !gid) { //first rule in group or no group
       if (!group) r = new RuleNode(this, length, id, table, in_ports, out_ports,
                                    match, mask, rw);
       else r = new RuleNode(this, length, id, table, id, in_ports, out_ports,
                             match, mask, rw);
+      // printf("_add_rule start1\n");
       this->id_to_node[id] = r;
       if (index < 0 || index >= (int)this->table_to_nodes[table]->size()) {
         this->table_to_nodes[table]->push_back(r);
@@ -495,9 +497,13 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       this->last_event.type = ADD_RULE;
       this->last_event.id1 = id;
       this->set_port_to_node_maps(r);
+      // printf("_add_rule start2\n");
       this->set_table_dependency(r);
+      // printf("_add_rule start3\n");
       this->set_node_pipelines(r);
+      // printf("_add_rule start4\n");
       r->subtract_infuences_from_flows();
+      // printf("_add_rule start5\n");
       r->process_src_flow(NULL);
 
     } else if (id_to_node.count(gid) > 0 &&
@@ -544,6 +550,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
 
 uint64_t NetPlumber::add_rule(uint32_t table,int index, List_t in_ports,
             List_t out_ports, array_t* match, array_t *mask, array_t* rw) {
+  // printf("add_rule start\n");
   return _add_rule(table,index,false,0,in_ports,out_ports,match,mask,rw);
 }
 
@@ -564,6 +571,20 @@ void NetPlumber::remove_rule(uint64_t rule_id) {
     this->last_event.id1 = rule_id;
     RuleNode *r = (RuleNode *)id_to_node[rule_id];
     if (r->group == 0) free_rule_memory(r);
+    else free_group_memory(r->table,r->group);
+  } else {
+    stringstream error_msg;
+    error_msg << "Rule " << rule_id << " does not exist. Can't delete it.";
+    LOG4CXX_WARN(logger,error_msg.str());
+  }
+}
+
+void NetPlumber::remove_rule_frtable(uint64_t rule_id) {
+  if (id_to_node.count(rule_id) > 0 && id_to_node[rule_id]->get_type() == RULE){
+    this->last_event.type = REMOVE_RULE;
+    this->last_event.id1 = rule_id;
+    RuleNode *r = (RuleNode *)id_to_node[rule_id];
+    if (r->group == 0) free_rule_memory(r,1);
     else free_group_memory(r->table,r->group);
   } else {
     stringstream error_msg;

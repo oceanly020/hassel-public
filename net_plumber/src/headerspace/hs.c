@@ -162,7 +162,9 @@ hs_destroy (struct hs *hs)
 void
 hs_free (struct hs *hs)
 {
+  // printf("this start hs_free\n");
   hs_destroy (hs);
+  // printf("this free hs_free\n");
   free (hs);
 }
 

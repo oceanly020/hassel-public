@@ -85,12 +85,12 @@ def generate_transfer_functions(settings):
     if ("optimize_fwd_table" not in settings.keys() or \
         settings["optimize_fwd_table"]):
       cs.optimize_forwarding_table()
-    if ("fwd_table_only" in settings.keys() and settings["fwd_table_only"]):
+    if ("fwd_table_only" in settings.keys() and settings["fwd_table_only"]): #如果仅仅考虑转发表，则仅仅对outpory生成id
       cs.generate_port_ids_only_for_output_ports()
-      cs.generate_fwd_table_tf(tf)
+      cs.generate_fwd_table_tf(tf) #仅仅生成转发表
     else:
       cs.generate_port_ids([])
-      cs.generate_transfer_function(tf)
+      cs.generate_transfer_function(tf) #这里生成的是转发函数包括修改头
     tf.save_as_json("%s/%s.tf.json"%(settings["output_path"],rtr_name))
     tf.save_object_to_file("%s/%s.tf"%(settings["output_path"],rtr_name))
     id += 1

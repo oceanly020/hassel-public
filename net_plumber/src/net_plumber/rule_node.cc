@@ -330,7 +330,7 @@ void RuleNode::subtract_infuences_from_flows() {
    */
   list<Effect*>::iterator eff_it;
   list<Flow*>::iterator src_it;
-  for (eff_it = effect_on->begin(); eff_it != effect_on->end(); eff_it++) {
+  for (eff_it = this->effect_on->begin(); eff_it != this->effect_on->end(); eff_it++) {
     RuleNode *n = (RuleNode *)(*(*eff_it)->influence)->node;
     for (src_it = n->source_flow.begin(); src_it != n->source_flow.end();
         src_it++) {

@@ -182,6 +182,7 @@ namespace net_plumber {
 
     RuleNode *get_rule(uint64_t rule_id);
     void remove_rule(uint64_t node_id);
+    void remove_rule_frtable(uint64_t node_id);
 
     /*
      * Source Flow Node Management
