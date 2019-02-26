@@ -276,7 +276,10 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
         uint64_t rule_id = (uint64_t)j + ((uint64_t)table << 32) ;
         RuleNode *r = N->get_rule(rule_id);
 
-
+        // uint32_t st_table[48]
+        // uint32_t st_nrules[48]
+        // uint32_t i2_table[48]
+        // uint32_t i2_nrules[48]
         printf("Get rule %d - %d ;", table, j);
         // cout << r->rule_to_str()<< endl;
         List_t in_ports = r->copy_in_ports();
