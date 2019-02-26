@@ -267,8 +267,8 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       uint32_t table = commands[i]["params"]["table"].asUInt();
       uint32_t nrules = commands[i]["params"]["nrules"].asUInt();
 
-      uint32_t i2_table[18] = {10,11,20,21,30,31,40,41,50,51,60,61,70,71,80,81,90,91}
-      uint32_t i2_nrules[18] = {29,8746,94,8635,23,8466,40,8626,34,8452,49,8856,26,8383,28,8423,67,8864}
+      uint32_t i2_table[18] = {10,11,20,21,30,31,40,41,50,51,60,61,70,71,80,81,90,91};
+      uint32_t i2_nrules[18] = {29,8746,94,8635,23,8466,40,8626,34,8452,49,8856,26,8383,28,8423,67,8864};
       printf("re_add_table\n");
       // long run_time = 0;
       for (int k = 0; k < 2; k++) {
