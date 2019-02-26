@@ -267,58 +267,58 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       uint32_t table = commands[i]["params"]["table"].asUInt();
       uint32_t nrules = commands[i]["params"]["nrules"].asUInt();
 
-
+      uint32_t i2_table[18] = {10,11,20,21,30,31,40,41,50,51,60,61,70,71,80,81,90,91}
+      uint32_t i2_nrules[18] = {29,8746,94,8635,23,8466,40,8626,34,8452,49,8856,26,8383,28,8423,67,8864}
       printf("re_add_table\n");
       // long run_time = 0;
-      for (int j = 1; j < nrules; j++) {
+      for (int k = 0; k < 2; k++) {
+        for (int j = 1; j < i2_nrules[k]; j++) {
+          uint64_t rule_id = (uint64_t)j + ((uint64_t)i2_table[k] << 32) ;
+          RuleNode *r = N->get_rule(rule_id);
 
-      
-        uint64_t rule_id = (uint64_t)j + ((uint64_t)table << 32) ;
-        RuleNode *r = N->get_rule(rule_id);
+          // uint32_t st_table[48]
+          // uint32_t st_nrules[48]
+          
+          printf("Get rule %d - %d ;", table, j);
+          // cout << r->rule_to_str()<< endl;
+          List_t in_ports = r->copy_in_ports();
+          List_t out_ports = r->copy_out_ports();
+          array_t *match = r->copy_match();
+          array_t *mask = r->copy_mask();
+          array_t *rewrite = r->copy_rewrite();
 
-        // uint32_t st_table[48]
-        // uint32_t st_nrules[48]
-        // uint32_t i2_table[48]
-        // uint32_t i2_nrules[48]
-        printf("Get rule %d - %d ;", table, j);
-        // cout << r->rule_to_str()<< endl;
-        List_t in_ports = r->copy_in_ports();
-        List_t out_ports = r->copy_out_ports();
-        array_t *match = r->copy_match();
-        array_t *mask = r->copy_mask();
-        array_t *rewrite = r->copy_rewrite();
+          // if (table == 31 && id == 8){
+          //   match = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
+          //   mask = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
+          //   rewrite = array_from_str("00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,11001111");
+          // }
 
-        // if (table == 31 && id == 8){
-        //   match = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
-        //   mask = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
-        //   rewrite = array_from_str("00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,11001111");
-        // }
+          // cout << "Match: " << array_to_str(match,16,false) << endl;
+          // if (mask)
+          //   cout << ", Mask: " << array_to_str(mask,16,false) << ", Rewrite: " << array_to_str(rewrite,16,false) << endl;
 
-        // cout << "Match: " << array_to_str(match,16,false) << endl;
-        // if (mask)
-        //   cout << ", Mask: " << array_to_str(mask,16,false) << ", Rewrite: " << array_to_str(rewrite,16,false) << endl;
+          // cout << ", iPorts: " << list_to_string(in_ports) << ", oPorts: " << list_to_string(out_ports) << endl;
 
-        // cout << ", iPorts: " << list_to_string(in_ports) << ", oPorts: " << list_to_string(out_ports) << endl;
+          // N->remove_rule(rule_id);
+          N->remove_rule_frtable(rule_id);
+          
+          // printf("Remove rule %d - %d successed.\n", table, id);
+          
+          gettimeofday(&start_in, NULL);
+          N->add_rule(table,
+                      j,
+                      in_ports,
+                      out_ports,
+                      match,
+                      mask,
+                      rewrite);
 
-        // N->remove_rule(rule_id);
-        N->remove_rule_frtable(rule_id);
-        
-        // printf("Remove rule %d - %d successed.\n", table, id);
-        
-        gettimeofday(&start_in, NULL);
-        N->add_rule(table,
-                    j,
-                    in_ports,
-                    out_ports,
-                    match,
-                    mask,
-                    rewrite);
-
-        // N->re_add_rule(table, id);
-        gettimeofday(&end_in, NULL);
-        run_time = end_in.tv_usec - start_in.tv_usec;
-        run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
-        printf(" need %ld us to be completed.\n", run_time);
+          // N->re_add_rule(table, id);
+          gettimeofday(&end_in, NULL);
+          run_time = end_in.tv_usec - start_in.tv_usec;
+          run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
+          printf(" need %ld us to be completed.\n", run_time);
+        }
       }
     } else if (type == "add_rule") {
       struct timeval start_in, end_in;

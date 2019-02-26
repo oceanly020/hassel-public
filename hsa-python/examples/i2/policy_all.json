@@ -1292,6 +1292,14 @@
    "method": "add_link"
   },
 
-
+  {
+   "params": {
+    "table": 10, 
+    "nrules": 58
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 11, 
+   "method": "re_add_table"
+  },
  ]
 }
