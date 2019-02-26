@@ -220,7 +220,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       RuleNode *r = N->get_rule(rule_id);
 
 
-      printf("Get rule %d - %d successed.\n", table, id);
+      // printf("Get rule %d - %d successed.\n", table, id);
       cout << r->rule_to_str()<< endl;
       List_t in_ports = r->copy_in_ports();
       List_t out_ports = r->copy_out_ports();
@@ -243,7 +243,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // N->remove_rule(rule_id);
       N->remove_rule_frtable(rule_id);
       
-      printf("Remove rule %d - %d successed.\n", table, id);
+      // printf("Remove rule %d - %d successed.\n", table, id);
 
       gettimeofday(&start_in, NULL);
       N->add_rule(table,
