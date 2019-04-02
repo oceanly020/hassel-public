@@ -519,7 +519,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
       run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
-      printf("process flow need %ld us.\n", table, id, run_time);
+      printf("process flow need %ld us.\n", run_time);
 
     } else if (id_to_node.count(gid) > 0 &&
           ((RuleNode*)id_to_node[gid])->group == gid) {
