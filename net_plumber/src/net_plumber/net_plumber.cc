@@ -610,8 +610,10 @@ void NetPlumber::remove_rule_frtable(uint64_t rule_id) {
     this->last_event.type = REMOVE_RULE;
     this->last_event.id1 = rule_id;
     RuleNode *r = (RuleNode *)id_to_node[rule_id];
+    printf("remove1\n" );
     if (r->group == 0) free_rule_memory(r,1);
     else free_group_memory(r->table,r->group);
+    printf("remove2\n" );
   } else {
     stringstream error_msg;
     error_msg << "Rule " << rule_id << " does not exist. Can't delete it.";
