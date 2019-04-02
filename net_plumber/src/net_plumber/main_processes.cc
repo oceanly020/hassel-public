@@ -275,7 +275,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // long run_time = 0;
       for (int k = 0; k < 2; k++) {
         for (int j = 1; j < i2_nrules[k]; j++) {
-          // printf("f1;\n");
+          printf("f1;\n");
           uint64_t rule_id = (uint64_t)j + ((uint64_t)i2_table[k] << 32) ;
           // printf("f2;\n");
           RuleNode *r = N->get_rule(rule_id);
@@ -284,7 +284,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // uint32_t st_nrules[48]
           
           // printf("Get rule %d - %d ;", i2_table[k], j);
-          // printf("f3;\n");
+          // 
           // cout << r->rule_to_str()<< endl;
           List_t in_ports = r->copy_in_ports();
           List_t out_ports = r->copy_out_ports();
@@ -305,8 +305,9 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // cout << ", iPorts: " << list_to_string(in_ports) << ", oPorts: " << list_to_string(out_ports) << endl;
 
           // N->remove_rule(rule_id);
+          printf("f2;\n");
           N->remove_rule_frtable(rule_id);
-          
+          printf("f3;\n");
           // printf("Remove rule %d - %d successed.\n", table, id);
           
           // gettimeofday(&start_in, NULL);
