@@ -108,7 +108,8 @@ void NetPlumber::free_rule_memory(RuleNode *r, bool remove_from_table) {
   if (remove_from_table) table_to_nodes[r->table]->remove(r);
   id_to_node.erase(r->node_id);
   clear_port_to_node_maps(r);
-  delete r;
+  if(r)
+    delete r;
 }
 
 void NetPlumber::free_table_memory(uint32_t table) {
@@ -153,7 +154,7 @@ void NetPlumber::set_port_to_node_maps(Node *n) {
 }
 
 void NetPlumber::clear_port_to_node_maps(Node *n) {
-  printf("input_ports\n");
+  // printf("input_ports\n");
   for (uint32_t i = 0; i < n->input_ports.size; i++) {
     inport_to_nodes[n->input_ports.list[i]]->remove(n);
     if (inport_to_nodes[n->input_ports.list[i]]->size() == 0) {
@@ -164,7 +165,7 @@ void NetPlumber::clear_port_to_node_maps(Node *n) {
       inport_to_nodes.erase(n->input_ports.list[i]);
     }
   }
-  printf("output_ports\n");
+  // printf("output_ports\n");
   for (uint32_t i = 0; i < n->output_ports.size; i++) {
     outport_to_nodes[n->output_ports.list[i]]->remove(n);
     if (outport_to_nodes[n->output_ports.list[i]]->size() == 0) {
@@ -175,7 +176,7 @@ void NetPlumber::clear_port_to_node_maps(Node *n) {
       outport_to_nodes.erase(n->output_ports.list[i]);
     }
   }
-  printf("end\n");
+  // printf("end\n");
 }
 
 void NetPlumber::set_table_dependency(RuleNode *r) {
