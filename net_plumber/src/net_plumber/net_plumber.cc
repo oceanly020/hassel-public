@@ -175,6 +175,7 @@ void NetPlumber::clear_port_to_node_maps(Node *n) {
       outport_to_nodes.erase(n->output_ports.list[i]);
     }
   }
+  printf("end\n");
 }
 
 void NetPlumber::set_table_dependency(RuleNode *r) {
