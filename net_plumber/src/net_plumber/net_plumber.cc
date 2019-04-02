@@ -484,7 +484,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
   if (table_to_nodes.count(table) > 0) {
     struct timeval start_in, end_in;
     gettimeofday(&start_in, NULL);
-    
+    printf("ok1;");
     table_to_last_id[table] += 1;
     uint64_t id = table_to_last_id[table] + ((uint64_t)table << 32) ;
     if (in_ports.size == 0) in_ports = table_to_ports[table];
@@ -497,6 +497,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                             match, mask, rw);
       // printf("_add_rule start1\n");
       this->id_to_node[id] = r;
+      printf("ok2;");
       if (index < 0 || index >= (int)this->table_to_nodes[table]->size()) {
         this->table_to_nodes[table]->push_back(r);
       } else {
@@ -504,7 +505,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
         for (int i=0; i < index; i++, it++);
         this->table_to_nodes[table]->insert(it,r);
       }
-      printf("ok;");
+      printf("ok3;");
       this->last_event.type = ADD_RULE;
       this->last_event.id1 = id;
       this->set_port_to_node_maps(r);
@@ -513,7 +514,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       // printf("_add_rule start3\n");
       this->set_node_pipelines(r);
       // printf("_add_rule start4\n");
-      printf("ok;");
+      printf("ok4;");
       long run_time = 0;
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
