@@ -275,23 +275,23 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // long run_time = 0;
       for (int k = 0; k < 2; k++) {
         for (int j = 1; j < i2_nrules[k]; j++) {
-          printf("f1;\n");
+          // printf("f1;\n");
           uint64_t rule_id = (uint64_t)j + ((uint64_t)i2_table[k] << 32) ;
-          printf("f2;\n");
+          // printf("f2;\n");
           RuleNode *r = N->get_rule(rule_id);
 
           // uint32_t st_table[48]
           // uint32_t st_nrules[48]
           
           // printf("Get rule %d - %d ;", i2_table[k], j);
-          printf("f3;\n");
+          // printf("f3;\n");
           // cout << r->rule_to_str()<< endl;
           List_t in_ports = r->copy_in_ports();
           List_t out_ports = r->copy_out_ports();
           array_t *match = r->copy_match();
           array_t *mask = r->copy_mask();
           array_t *rewrite = r->copy_rewrite();
-          printf("f4;\n");
+          // printf("f4;\n");
           // if (table == 31 && id == 8){
           //   match = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
           //   mask = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
@@ -322,7 +322,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // run_time = end_in.tv_usec - start_in.tv_usec;
           // run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
           // printf(" need %ld us to be completed.\n", run_time);
-          printf("f5;\n");
+          // printf("f5;\n");
         }
       }
     } else if (type == "add_rule") {

@@ -481,11 +481,11 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                                bool group, uint64_t gid,
                                List_t in_ports, List_t out_ports,
                                array_t* match, array_t *mask, array_t* rw) {
-  printf("ok;");
+  printf("ok;\n");
   if (table_to_nodes.count(table) > 0) {
     struct timeval start_in, end_in;
     gettimeofday(&start_in, NULL);
-    printf("ok1;");
+    printf("ok1;\n");
     table_to_last_id[table] += 1;
     uint64_t id = table_to_last_id[table] + ((uint64_t)table << 32) ;
     if (in_ports.size == 0) in_ports = table_to_ports[table];
@@ -498,7 +498,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                             match, mask, rw);
       // printf("_add_rule start1\n");
       this->id_to_node[id] = r;
-      printf("ok2;");
+      printf("ok2;\n");
       if (index < 0 || index >= (int)this->table_to_nodes[table]->size()) {
         this->table_to_nodes[table]->push_back(r);
       } else {
@@ -506,7 +506,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
         for (int i=0; i < index; i++, it++);
         this->table_to_nodes[table]->insert(it,r);
       }
-      printf("ok3;");
+      printf("ok3;\n");
       this->last_event.type = ADD_RULE;
       this->last_event.id1 = id;
       this->set_port_to_node_maps(r);
@@ -515,7 +515,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       // printf("_add_rule start3\n");
       this->set_node_pipelines(r);
       // printf("_add_rule start4\n");
-      printf("ok4;");
+      printf("ok4;\n");
       long run_time = 0;
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
@@ -532,7 +532,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
 
     } else if (id_to_node.count(gid) > 0 &&
           ((RuleNode*)id_to_node[gid])->group == gid) {
-      printf("if2;");
+      printf("if2;\n");
       RuleNode *rg = (RuleNode*)this->id_to_node[gid];
       table = rg->table;
       r = new RuleNode(this, length, id, table, gid, in_ports, out_ports,
@@ -554,7 +554,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       r->process_src_flow(NULL);
 
     } else {
-      printf("if3;");
+      printf("if3;\n");
       free(in_ports.list);free(out_ports.list);free(match);free(mask);free(rw);
       stringstream error_msg;
       error_msg << "Group " << group << " does not exist. Can't add rule to it."
@@ -564,7 +564,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
     }
     return id;
   } else {
-    printf("if4;");
+    printf("if4;\n");
     free(in_ports.list);free(out_ports.list);free(match);free(mask);free(rw);
     stringstream error_msg;
     error_msg << "trying to add a rule to a non-existing table (id: " << table
