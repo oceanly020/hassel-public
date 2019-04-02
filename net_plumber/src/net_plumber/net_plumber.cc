@@ -121,7 +121,12 @@ void NetPlumber::free_table_memory(uint32_t table) {
     }
     table_to_nodes.erase(table);
     delete rules_list;
-    free(table_to_ports[table].list);
+    if (table_to_ports[table].list)
+    {
+       free(table_to_ports[table].list);
+       table_to_ports[table].list = NULL;
+    }
+    // free(table_to_ports[table].list);
     table_to_ports.erase(table);
   } else {
     stringstream error_msg;
