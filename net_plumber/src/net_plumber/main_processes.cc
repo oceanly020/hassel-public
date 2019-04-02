@@ -308,13 +308,13 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // printf("Remove rule %d - %d successed.\n", table, id);
           
           // gettimeofday(&start_in, NULL);
-          // N->add_rule(i2_table[k],
-          //             j,
-          //             in_ports,
-          //             out_ports,
-          //             match,
-          //             mask,
-          //             rewrite);
+          N->add_rule(i2_table[k],
+                      j,
+                      in_ports,
+                      out_ports,
+                      match,
+                      mask,
+                      rewrite);
 
           // gettimeofday(&end_in, NULL);
           // run_time = end_in.tv_usec - start_in.tv_usec;

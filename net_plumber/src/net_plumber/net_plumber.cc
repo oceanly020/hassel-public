@@ -504,6 +504,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
         for (int i=0; i < index; i++, it++);
         this->table_to_nodes[table]->insert(it,r);
       }
+      printf("ok;");
       this->last_event.type = ADD_RULE;
       this->last_event.id1 = id;
       this->set_port_to_node_maps(r);
@@ -512,6 +513,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       // printf("_add_rule start3\n");
       this->set_node_pipelines(r);
       // printf("_add_rule start4\n");
+      printf("ok;");
       long run_time = 0;
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
