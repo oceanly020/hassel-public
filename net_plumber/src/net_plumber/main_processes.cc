@@ -206,8 +206,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // gettimeofday(&end_in, NULL);
       printf("Remove link %d - %d need %2lf ms to be completed.\n", from_port, to_port, (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
       // printf("Remove link %d - %d need %ld ms to be completed.\n", from_port, to_port, (end_in.tv_usec - start_in.tv_usec)/1000);
-    } 
-    else if (type == "re_add_rule") {
+    } else if (type == "re_add_rule") {
       // time_t start_in, end_in;
       struct timeval start_in, end_in;
       long run_time = 0;
@@ -255,6 +254,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
                   rewrite);
 
       // N->re_add_rule(table, id);
+
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
       run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
@@ -281,7 +281,8 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // uint32_t st_table[48]
           // uint32_t st_nrules[48]
           
-          printf("Get rule %d - %d ;", i2_table[k], j);
+          // printf("Get rule %d - %d ;", i2_table[k], j);
+
           // cout << r->rule_to_str()<< endl;
           List_t in_ports = r->copy_in_ports();
           List_t out_ports = r->copy_out_ports();
@@ -306,8 +307,8 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           
           // printf("Remove rule %d - %d successed.\n", table, id);
           
-          gettimeofday(&start_in, NULL);
-          N->add_rule(table,
+          // gettimeofday(&start_in, NULL);
+          N->add_rule(i2_table[k],
                       j,
                       in_ports,
                       out_ports,
@@ -315,11 +316,10 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
                       mask,
                       rewrite);
 
-          // N->re_add_rule(table, id);
-          gettimeofday(&end_in, NULL);
-          run_time = end_in.tv_usec - start_in.tv_usec;
-          run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
-          printf(" need %ld us to be completed.\n", run_time);
+          // gettimeofday(&end_in, NULL);
+          // run_time = end_in.tv_usec - start_in.tv_usec;
+          // run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
+          // printf(" need %ld us to be completed.\n", run_time);
         }
       }
     } else if (type == "add_rule") {

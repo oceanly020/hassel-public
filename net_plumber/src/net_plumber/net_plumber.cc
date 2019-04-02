@@ -24,10 +24,12 @@
 #include <fstream>
 #include "net_plumber_utils.h"
 #include "../jsoncpp/json/json.h"
+#include <sys/time.h>
 
 using namespace std;
 using namespace log4cxx;
 using namespace net_plumber;
+
 
 LoggerPtr NetPlumber::logger(Logger::getLogger("NetPlumber"));
 LoggerPtr loop_logger(Logger::getLogger("DefaultLoopDetectionLogger"));
@@ -475,6 +477,9 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                                List_t in_ports, List_t out_ports,
                                array_t* match, array_t *mask, array_t* rw) {
   if (table_to_nodes.count(table) > 0) {
+    struct timeval start_in, end_in;
+    gettimeofday(&start_in, NULL);
+    
     table_to_last_id[table] += 1;
     uint64_t id = table_to_last_id[table] + ((uint64_t)table << 32) ;
     if (in_ports.size == 0) in_ports = table_to_ports[table];
@@ -502,9 +507,19 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       // printf("_add_rule start3\n");
       this->set_node_pipelines(r);
       // printf("_add_rule start4\n");
+      long run_time = 0;
+      gettimeofday(&end_in, NULL);
+      run_time = end_in.tv_usec - start_in.tv_usec;
+      run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
+      printf("Add rule %d - %d preprocessing need %ld us.  ", table, id, run_time);
+      gettimeofday(&start_in, NULL);
       r->subtract_infuences_from_flows();
       // printf("_add_rule start5\n");
       r->process_src_flow(NULL);
+      gettimeofday(&end_in, NULL);
+      run_time = end_in.tv_usec - start_in.tv_usec;
+      run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
+      printf("process flow need %ld us.\n", table, id, run_time);
 
     } else if (id_to_node.count(gid) > 0 &&
           ((RuleNode*)id_to_node[gid])->group == gid) {
