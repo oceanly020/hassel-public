@@ -481,6 +481,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
                                bool group, uint64_t gid,
                                List_t in_ports, List_t out_ports,
                                array_t* match, array_t *mask, array_t* rw) {
+  printf("ok;");
   if (table_to_nodes.count(table) > 0) {
     struct timeval start_in, end_in;
     gettimeofday(&start_in, NULL);
