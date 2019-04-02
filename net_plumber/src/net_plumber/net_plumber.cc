@@ -107,9 +107,12 @@ void NetPlumber::free_group_memory(uint32_t table, uint64_t group) {
 void NetPlumber::free_rule_memory(RuleNode *r, bool remove_from_table) {
   if (remove_from_table) table_to_nodes[r->table]->remove(r);
   id_to_node.erase(r->node_id);
+  printf("free_rule1\n");
   clear_port_to_node_maps(r);
+  printf("free_rule2\n");
   if(r)
     delete r;
+  printf("free_rule3\n");
 }
 
 void NetPlumber::free_table_memory(uint32_t table) {
