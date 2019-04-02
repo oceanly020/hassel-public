@@ -531,7 +531,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
 
     } else if (id_to_node.count(gid) > 0 &&
           ((RuleNode*)id_to_node[gid])->group == gid) {
-
+      printf("if2;");
       RuleNode *rg = (RuleNode*)this->id_to_node[gid];
       table = rg->table;
       r = new RuleNode(this, length, id, table, gid, in_ports, out_ports,
@@ -553,6 +553,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       r->process_src_flow(NULL);
 
     } else {
+      printf("if3;");
       free(in_ports.list);free(out_ports.list);free(match);free(mask);free(rw);
       stringstream error_msg;
       error_msg << "Group " << group << " does not exist. Can't add rule to it."
@@ -562,6 +563,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
     }
     return id;
   } else {
+    printf("if4;");
     free(in_ports.list);free(out_ports.list);free(match);free(mask);free(rw);
     stringstream error_msg;
     error_msg << "trying to add a rule to a non-existing table (id: " << table
