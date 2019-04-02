@@ -312,7 +312,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           
           // gettimeofday(&start_in, NULL);
           N->add_rule(i2_table[k],
-                      j,
+                      0,
                       in_ports,
                       out_ports,
                       match,
