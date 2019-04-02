@@ -577,7 +577,6 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
 uint64_t NetPlumber::add_rule(uint32_t table,int index, List_t in_ports,
             List_t out_ports, array_t* match, array_t *mask, array_t* rw) {
   // printf("add_rule start\n");
-  
   return _add_rule(table,index,false,0,in_ports,out_ports,match,mask,rw);
 }
 
