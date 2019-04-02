@@ -275,21 +275,23 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // long run_time = 0;
       for (int k = 0; k < 2; k++) {
         for (int j = 1; j < i2_nrules[k]; j++) {
+          printf("f1;");
           uint64_t rule_id = (uint64_t)j + ((uint64_t)i2_table[k] << 32) ;
+          printf("f2;");
           RuleNode *r = N->get_rule(rule_id);
 
           // uint32_t st_table[48]
           // uint32_t st_nrules[48]
           
           // printf("Get rule %d - %d ;", i2_table[k], j);
-          printf("fitrst1;");
+          printf("f3;");
           // cout << r->rule_to_str()<< endl;
           List_t in_ports = r->copy_in_ports();
           List_t out_ports = r->copy_out_ports();
           array_t *match = r->copy_match();
           array_t *mask = r->copy_mask();
           array_t *rewrite = r->copy_rewrite();
-          printf("fitrst2;");
+          printf("f4;");
           // if (table == 31 && id == 8){
           //   match = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
           //   mask = array_from_str("11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,11111111,00000000,00000000");
