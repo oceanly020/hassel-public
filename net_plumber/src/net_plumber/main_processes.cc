@@ -271,7 +271,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       uint32_t i2_nrules[18] = {29,8746,94,8635,23,8466,40,8626,34,8452,49,8856,26,8383,28,8423,67,8864};
       // printf("re_add_table\n");
       // long run_time = 0;
-      for (int k = 0; k < 2; k++) {
+      for (int k = 1; k < 2; k++) {
         for (int j = 1; j < i2_nrules[k]; j++) {
           printf("f1;\n");
           uint64_t rule_id = (uint64_t)j + ((uint64_t)i2_table[k] << 32) ;

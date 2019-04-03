@@ -111,7 +111,8 @@ void NetPlumber::free_rule_memory(RuleNode *r, bool remove_from_table) {
   clear_port_to_node_maps(r);
   // printf("free_memory2\n");
   // if(r){
-  printf("%d\n", r);
+  printf("%d - %d\n", r, r->node_id);
+
   delete r;
   //   r = NULL;
   // }
