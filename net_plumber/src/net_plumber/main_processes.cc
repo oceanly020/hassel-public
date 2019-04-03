@@ -121,7 +121,6 @@ list<long> load_netplumber_from_dir(string json_file_path, NetPlumber * N, array
             }
           }
         }
-
         // clean up
         jsfile.close();
       }
@@ -172,7 +171,6 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
       // gettimeofday(&end_in, NULL);
       // printf("Add source %d need %ld ms to be completed.\n", commands[i]["id"].asUInt(), ((end_in.tv_usec - start_in.tv_usec)/1000));
       printf("Add source %d need %2lf ms to be completed.\n", commands[i]["id"].asUInt(), (double(end_in - start_in) / (CLOCKS_PER_SEC/1000)));
-
     } else if (type == "add_source_probe") {
       List_t ports = val_to_list(commands[i]["params"]["ports"]);
       PROBE_MODE mode = !strcasecmp(commands[i]["params"]["mode"].asCString(), "universal")
@@ -312,7 +310,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           
           // gettimeofday(&start_in, NULL);
           N->add_rule(i2_table[k],
-                      0,
+                      j,
                       in_ports,
                       out_ports,
                       match,
