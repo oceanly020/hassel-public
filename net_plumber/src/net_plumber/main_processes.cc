@@ -322,6 +322,7 @@ void load_policy_file(string json_policy_file, NetPlumber *N, array_t *filter) {
           // run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
           // printf(" need %ld us to be completed.\n", run_time);
           // printf("f5;\n");
+          printf("ruleadd end;\n");
         }
       }
     } else if (type == "add_rule") {

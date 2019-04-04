@@ -28,33 +28,33 @@
   //  "method": "add_source"
   // },
 
-  // {
-  //  "params": {
-  //   "to_port": 200039,
-  //   "from_port": 250039
-  //  }, 
-  //  "jsonrpc": "2.0", 
-  //  "id": 0, 
-  //  "method": "add_link"
-  // }, 
-  // {
-  //  "params": {
-  //   "hs": {
-  //    "diff": [
-  //     []
-  //    ], 
-  //    "list": [
-  //     "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
-  //    ]
-  //   }, 
-  //   "ports": [
-  //    250039
-  //   ]
-  //  }, 
-  //  "jsonrpc": "2.0", 
-  //  "id": 1, 
-  //  "method": "add_source"
-  // },
+  {
+   "params": {
+    "to_port": 200039,
+    "from_port": 250039
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 0, 
+   "method": "add_link"
+  }, 
+  {
+   "params": {
+    "hs": {
+     "diff": [
+      []
+     ], 
+     "list": [
+      "xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx,xxxxxxxx"
+     ]
+    }, 
+    "ports": [
+     250039
+    ]
+   }, 
+   "jsonrpc": "2.0", 
+   "id": 1, 
+   "method": "add_source"
+  },
 
   // {
   //  "params": {
