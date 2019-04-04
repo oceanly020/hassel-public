@@ -629,14 +629,14 @@ void NetPlumber::remove_rule_frtable(uint64_t rule_id) {
     RuleNode *r = (RuleNode *)id_to_node[rule_id];
     
     if (r->group == 0) {
-      printf("free_rule1\n" );
+      // printf("free_rule1\n" );
       free_rule_memory(r,1);
-      printf("free_rule2\n" );
+      // printf("free_rule2\n" );
     }
     else {
-      printf("group1\n" );
+      // printf("group1\n" );
       free_group_memory(r->table,r->group);
-      printf("group2\n" );
+      // printf("group2\n" );
     }
     
   } else {
