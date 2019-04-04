@@ -539,7 +539,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
       printf("Add rule %d - %d preprocessing need %ld us.  ", table, id, run_time);
       gettimeofday(&start_in, NULL);
-      r->subtract_infuences_from_flows();
+      // r->subtract_infuences_from_flows();
       // printf("_add_rule start5\n");
       // r->process_src_flow(NULL);
       gettimeofday(&end_in, NULL);
