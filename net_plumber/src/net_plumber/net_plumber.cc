@@ -541,7 +541,7 @@ uint64_t NetPlumber::_add_rule(uint32_t table,int index,
       gettimeofday(&start_in, NULL);
       // r->subtract_infuences_from_flows();
       // printf("_add_rule start5\n");
-      // r->process_src_flow(NULL);
+      r->process_src_flow(NULL);
       gettimeofday(&end_in, NULL);
       run_time = end_in.tv_usec - start_in.tv_usec;
       run_time = 1000000 * (end_in.tv_sec - start_in.tv_sec) + end_in.tv_usec - start_in.tv_usec;
